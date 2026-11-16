@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block sub %}Application received{% endblock %}
+{% block body %}
+<div class="card center">
+<p>Your application has been submitted. Your request will be reviewed within 48 hours.</p>
+<div class="big">{{ number }}</div>
+<p style="color:var(--dim)">Save this form number. You need it to check your application status.</p>
+<a class="btn" href="/status">Check application status</a>
+</div>
+{% endblock %}

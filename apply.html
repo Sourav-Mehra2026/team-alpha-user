@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block sub %}Guild application{% endblock %}
+{% block body %}
+<form class="card" method="post">
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+<label>Free Fire UID</label>
+<input name="uid" inputmode="numeric" placeholder="Enter your UID" required>
+<label>Previous guild name <small>(leave empty if you were never in a guild)</small></label>
+<input name="old_guild" placeholder="Optional">
+<label>Level</label>
+<input name="level" inputmode="numeric" placeholder="Your current level" required>
+<label>CS Rank</label>
+<select name="cs_rank" required><option value="">Choose rank</option>{% for r in ranks %}<option>{{ r }}</option>{% endfor %}</select>
+<label>BR Rank</label>
+<select name="br_rank" required><option value="">Choose rank</option>{% for r in ranks %}<option>{{ r }}</option>{% endfor %}</select>
+<label>Prime level</label>
+<select name="prime" required><option value="">Choose prime level</option>{% for p in prime %}<option>{{ p }}</option>{% endfor %}</select>
+<label>How is your gameplay?</label>
+<select name="gameplay" required><option value="">Choose one</option>{% for g in gameplay %}<option>{{ g }}</option>{% endfor %}</select>
+<label>How old are you?</label>
+<select name="age" required><option value="">Choose age</option>{% for a in ages %}<option>{{ a }}</option>{% endfor %}</select>
+<button type="submit">Submit application</button>
+</form>
+<p class="nav">Already applied? <a href="/status">Check application status</a></p>
+{% endblock %}

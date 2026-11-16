@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block sub %}Application status{% endblock %}
+{% block body %}
+<form class="card" method="post">
+<label>Form number</label>
+<input name="number" value="{{ number }}" placeholder="Example: TA-1001" required>
+<button type="submit">Check status</button>
+</form>
+{% if searched %}
+<div class="card" style="margin-top:16px">
+{% if row %}
+<div class="center"><span class="pill {{ row['status'] }}">{{ row['status'] }}</span></div>
+{% if row['status'] != 'Pending' and row['note'] %}<div class="note">{{ row['note'] }}</div>
+{% elif row['status'] == 'Pending' %}<p class="center" style="color:var(--dim)">Your request is being reviewed. This can take up to 48 hours.</p>{% endif %}
+{% else %}<p class="err center">No application found with this number.</p>{% endif %}
+</div>
+{% endif %}
+<p class="nav"><a href="/">Back to application form</a></p>
+{% endblock %}

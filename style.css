@@ -1,0 +1,33 @@
+:root{--bg:#000;--card:#0c0c0e;--line:#222226;--text:#f2f2f4;--dim:#8b8b94;--ice:#a9d4ff;}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#16202b 0,#000 55%) no-repeat,#000;color:var(--text);font-family:'Outfit',system-ui,sans-serif;min-height:100vh;line-height:1.5}
+.wrap{max-width:520px;margin:0 auto;padding:32px 18px 60px}
+.brand{text-align:center;margin-bottom:26px}
+.brand img{width:92px;height:auto}
+.brand h1{margin:10px 0 2px;font-size:1.7rem;font-weight:600;letter-spacing:.04em}
+.brand p{margin:0;color:var(--dim);font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+label{display:block;margin:16px 0 6px;font-size:.92rem;color:var(--dim)}
+label small{color:#5d5d66}
+input,select,textarea{width:100%;background:#050506;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--ice)}
+button,.btn{display:block;width:100%;margin-top:22px;padding:14px;border:0;border-radius:12px;background:var(--text);color:#000;font:inherit;font-weight:600;cursor:pointer;text-align:center;text-decoration:none}
+button:hover{background:var(--ice)}
+.ghost{background:transparent;color:var(--ice);border:1px solid var(--line)}
+.ghost:hover{background:#0f1720}
+.err{color:#ff8a8a;margin:0 0 6px}
+.nav{text-align:center;margin-top:18px;color:var(--dim);font-size:.92rem}
+.nav a{color:var(--ice);text-decoration:none}
+.big{font-size:2.1rem;font-weight:600;letter-spacing:.06em;text-align:center;color:var(--ice);margin:10px 0}
+.center{text-align:center}
+.pill{display:inline-block;padding:3px 12px;border-radius:99px;font-size:.82rem;border:1px solid var(--line)}
+.Pending{color:#ffd27a;border-color:#4a3b17}.Accepted{color:#7dffb0;border-color:#174a2c}.Rejected{color:#ff8a8a;border-color:#4a1717}
+.note{margin-top:14px;padding:12px 14px;border-left:2px solid var(--ice);background:#080b0f;border-radius:0 10px 10px 0;color:var(--text)}
+.row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #151518;font-size:.93rem}
+.row span:first-child{color:var(--dim)}
+.app{margin-bottom:16px}
+.app h3{margin:0 0 8px;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem}
+.btns{display:flex;gap:10px}
+.btns button{margin-top:10px}
+.acc{background:#7dffb0}.rej{background:#ff8a8a}
+.acc:hover{background:#a6ffc8}.rej:hover{background:#ffb0b0}
